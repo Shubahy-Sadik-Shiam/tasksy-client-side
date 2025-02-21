@@ -1,8 +1,5 @@
-# React + Vite
+# Tasksy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tasksy is a task management application that helps users organize, track, and update their tasks efficiently. It allows users to create tasks, categorize them (e.g., To-Do, In-Progress, Done), and update them as they progress. The app also integrates authentication, likely with Google Login, and uses a backend (possibly built with Express and MongoDB) to store and manage tasks.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live Link: https://tasksy-d8f61.web.app
