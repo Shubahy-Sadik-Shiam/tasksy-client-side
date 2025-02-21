@@ -18,26 +18,28 @@ const AddTask = () => {
     const task = { title, description, category, time, email };
 
     axios.post("https://tasksy-server.vercel.app/tasks", task).then((res) => {
-      form.reset();
-      const Toast = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 1500,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.onmouseenter = Swal.stopTimer;
-          toast.onmouseleave = Swal.resumeTimer;
-        },
-      });
-      Toast.fire({
-        icon: "success",
-        title: "Task Added Successfully",
-      });
+      if (res.data.insertedId) {
+        form.reset();
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 1500,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          },
+        });
+        Toast.fire({
+          icon: "success",
+          title: "Task Added Successfully",
+        });
+      }
     });
   };
   return (
-    <div className="pt-32">
+    <div className="pt-32 min-h-screen">
       <h2 className="text-4xl font-bold text-center"> Add a Task</h2>
       <form
         onSubmit={handleSubmit}
@@ -59,14 +61,12 @@ const AddTask = () => {
           placeholder="Task description (max 200 char.)"
         ></textarea>
         <select
-        defaultValue="Select Task Category"
+          defaultValue="Select Task Category"
           name="category"
           required
           className="select select-info w-full mt-2"
         >
-          <option disabled>
-            Select Task Category
-          </option>
+          <option disabled>Select Task Category</option>
           <option>To-Do</option>
           <option>In-Progress</option>
           <option>Done</option>

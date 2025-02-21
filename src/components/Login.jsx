@@ -2,13 +2,17 @@ import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const { googleLogin } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleLogin = () => {
     googleLogin()
       .then((res) => {
+        navigate("/tasks");
+        document.getElementById("my_modal_3").close();
         const userInfo = {
           email: res.user?.email,
           name: res.user?.displayName,

@@ -1,5 +1,3 @@
-
-import AddModal from "./components/AddModal";
 import Todo from "./components/Todo";
 import Inprogress from "./components/Inprogress";
 import Done from "./components/Done";
@@ -12,7 +10,6 @@ const Tasks = () => {
         <Inprogress></Inprogress>
        <Done></Done>
       </div>
-      <AddModal></AddModal>
     </div>
   );
 };
