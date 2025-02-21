@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+a.active{
+    background-color: transparent !important;
+    text-decoration: underline !important;
+    font-weight: bold;
+    color: white !important;
+}
