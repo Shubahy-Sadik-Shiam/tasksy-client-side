@@ -24,14 +24,21 @@ Tasksy is a task management application that helps users organize, track, and up
 Frontend
 
 ✅ React – Main framework
+
 ✅ Tailwind CSS – Styling
+
 ✅ Daisy UI – UI components
+
 ✅ React Icons – Icons
+
 ✅ Dnd Kit – Drag-and-drop functionality
+
 ✅ React Query – Data fetching & caching
 
 Backend:
 
 ✅ Express.js – Server-side framework
+
 ✅ MongoDB – Database (without Mongoose)
+
 ✅ Axios – HTTP requests
